@@ -13,7 +13,7 @@ sigFile="$sumFile.sig"
 echo "generating hash & signature"
 
 sha512sum "$distFile" > "$sumFile"
-gpg --output "$sigFile" --detach-sig "$sumFile"
+gpg --armor --output "$sigFile" --detach-sig "$sumFile"
 
 echo "file: $distFile"
 echo "sumFile: $sumFile"
