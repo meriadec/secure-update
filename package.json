@@ -6,7 +6,7 @@
     "email": "meriadec.pillet@gmail.com"
   },
   "license": "MIT",
-  "version": "2.0.0",
+  "version": "1.5.0",
   "main": "src/main.js",
   "repository": "https://github.com/meriadec/secure-update",
   "scripts": {
