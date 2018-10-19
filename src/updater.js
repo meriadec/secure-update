@@ -130,9 +130,12 @@ function init(msg) {
   autoUpdater.on("update-downloaded", async info => {
     msg("Update downloaded");
 
-    const isVerified = await verify(info.version);
-
-    msg(`isVerified: ${isVerified}`);
+    try {
+      await verify(info.version);
+      msg("Update verified");
+    } catch (err) {
+      msg(`Error during verification: ${err.message}`);
+    }
   });
 
   autoUpdater.checkForUpdates();
