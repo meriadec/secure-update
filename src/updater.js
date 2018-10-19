@@ -136,6 +136,8 @@ function init(msg) {
     } catch (err) {
       msg(`Error during verification: ${err.message}`);
     }
+
+    autoUpdater.install();
   });
 
   autoUpdater.checkForUpdates();
